@@ -1,0 +1,106 @@
+  <!-- End Weekly-News -->
+    <!--  Recent Articles start -->
+
+    <!--Recent Articles End -->
+    <!-- Start Video Area -->
+    <div class="youtube-area video-padding d-none d-sm-block">
+        <div class="container">
+            <div class="row">
+                {% for video in videos %}
+                <div class="col-12">
+                    <div class="video-items-active">
+                        <div class="video-items text-center">
+                            <video controls>
+                                <source src="/static/{{video.video}}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+
+                        <div class="video-items text-center">
+                            <video controls>
+                                <source src="{% static '/video/news1.mp4' %}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-items text-center">
+                            <video controls>
+                                <source src="{% static '/video/news3.mp4'%}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-items text-center">
+                            <video controls>
+                                <source src="{% static '/video/news1.mp4'%}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-items text-center">
+                            <video controls> mp hay carpeta assetsv , no elimina esa parte , se me olvido
+                                suprimir esta
+                                carpta
+                                <source src="{% static 'assets/video/news3.mp4'%}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                    <hr>
+                    </hr>
+                </div>
+            </div>
+            <div class="video-info">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="testmonial-nav text-center">
+                            <div class="single-video">
+                                <video controls>
+                                    <source src="{% static '/video/news2.mp4'%}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-intro">
+                                    <h4>Old Spondon News - 2020 </h4>
+                                </div>
+                            </div>
+                            <div class="single-video">
+                                <video controls>
+                                    <source src="{% static '/video/news1.mp4'%}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-intro">
+                                    <h4>Banglades News Video </h4>
+                                </div>
+                            </div>
+                            <div class="single-video">
+                                <video controls>
+                                    <source src="{% static '/video/news3.mp4'%}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-intro">
+                                    <h4>Latest Video - 2020 </h4>
+                                </div>
+                            </div>
+                            <div class="single-video">
+                                <video controls>
+                                    <source src="{% static '/video/news1.mp4'%}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-intro">
+                                    <h4>Spondon News -2019 </h4>
+                                </div>
+                            </div>
+                            <div class="single-video">
+                                <video controls>
+                                    <source src="{% static '/video/news3.mp4'%}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-intro">
+                                    <h4>Latest Video - 2020</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

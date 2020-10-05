@@ -1,0 +1,60 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block head %}
+{% include 'head.html' %}
+{% endblock %}
+
+
+{% block contenido %}
+
+
+
+<div class="alert alert-primary" role="alert">
+   <center> <p>Cualquier sugerencia o preguntar puedes dejarnolos saber aqui .</p></center>
+<hr>
+  <marquee> <p>DiarioWeek.com los numeros 1 en mantenerte informado</p></marquee>
+  
+  </div>
+{% if form.errors %}
+
+<p style="color: red;">Por favor revisa este campo</p>
+
+{% endif %}
+
+
+<form action="" method="POST"> {% csrf_token %}
+    <center>
+    <table>
+        
+<hr>
+<h1>Contactos</h1>
+   {{form.as_table}}
+
+
+        
+    </table>
+
+    <input type="submit" value = "Enviar">
+
+</form>
+
+</center>
+
+
+{% block segmento %}
+
+{% endblock %}
+
+{% block noticias_recientes %}
+
+{% endblock %}
+
+{% block videos_banner %}
+{% endblock %}
+
+{% block opinion %}
+{% endblock %}
+
+
+
+{% endblock %}

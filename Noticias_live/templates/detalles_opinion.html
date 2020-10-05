@@ -1,0 +1,24 @@
+{% extends 'detalles_noticias.html'%}
+{% load static %}
+
+
+{% block head %}
+    {% include 'head.html' %}
+{% endblock %}
+
+{% block contenido %}
+
+
+<center><h1>{{contenidos.Titulo}}</h1></center>
+    
+<center>  <img src="/static/{{contenidos.Portada}}" width="700"
+    height="400"> </center>
+
+<p>{{contenidos.contenidos1|safe}}</p>
+
+
+
+
+
+{% endblock %}
+

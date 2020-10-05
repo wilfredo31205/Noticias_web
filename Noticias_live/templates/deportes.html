@@ -1,0 +1,101 @@
+{% extends 'noticias_recientes.html'%}
+
+{% load static %}
+{% block noticias_recientes %}
+{% endblock  %}
+
+
+
+{% block contenido %}
+<hr>
+<h1 class="bg-success mb-2">Deportes</h1>
+
+<div class="card-group">
+  {% for cont in contenidos %}
+  <div class="card">
+    <img class="card-img-top pt-3" src="/static/{{cont.imagen_preferencial}}"  width="400"
+                                                                     height="400"  alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{cont.Titulo}}</h5>
+      <p class="card-text">{{cont.descripcion}}</p>
+      
+      <a href="{% url 'news_app:detail' cont.id  cont.slug %}" class="btn btn-primary">Leer más</a>
+    </div>
+    <div class="card-footer">
+
+    </div>
+  </div>
+    {% endfor %}
+    </div>
+  {% endblock %}
+  {% block footer %}
+  <footer>
+      <!-- Footer Start-->
+      <div class="footer-main footer-bg">
+          <div class="footer-area footer-padding">
+              <div class="container">
+                  <div class="row d-flex justify-content-between">
+                      <div class="col-xl-3 col-lg-3 col-md-5 col-sm-8">
+                          <div class="single-footer-caption mb-50">
+                              <div class="single-footer-caption mb-30">
+                                  <!-- logo -->
+                                  <div class="footer-logo">
+                                      <a href="index.html"><img src="{% static '/img/logo/logo2_footer.png'%}" alt=""></a>
+                                  </div>
+                                  <div class="footer-tittle">
+                                      <div class="footer-pera">
+                                          <p class="info1">Somos un medio de comunicación especialmente para ti, para que estes informado las
+                                              24 horas del dia y los 7 dias de  la semana .</p>
+                                          <p class="info2">Zona Oriental , invivienda Santo Domingo Este, República Dominicana</p>
+                                          <p class="info2">Phone: 829-586-2553 /809-381-3160</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7">
+                          <div class="single-footer-caption mb-50">
+  
+                              <!-- Popular post -->
+  
+  
+  
+  
+  
+                          </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
+                          <div class="single-footer-caption mb-50">
+                              <div class="banner">
+                                  <img src="{% static '/img/gallery/body_card4.png'%}" alt="">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- footer-bottom aera -->
+          <div class="footer-bottom-area footer-bg">
+              <div class="container">
+                  <div class="footer-border">
+                      <div class="row d-flex align-items-center">
+                          <div class="col-xl-12 ">
+                              <div class="footer-copy-right text-center">
+                                  <p>
+                                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                      Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                                      All rights reserved
+                                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Footer End-->
+  </footer>
+  {% endblock %}
+
+

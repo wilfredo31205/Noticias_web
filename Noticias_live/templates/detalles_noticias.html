@@ -1,0 +1,152 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block head %}
+    {% include 'head.html' %}
+{% endblock %}
+
+
+{% block contenido %}
+
+    <h1>{{post.Titulo}}</h1>
+    <p>{{post.fecha_publicacion}}</p>
+    <span><i class ="fas fa-eye"></i>{{object.Contador_visitas}}</span>
+    <center>  <img src="/static/{{post.imagen_preferencial}}"> </center>
+    <p>Redactado por : {{post.autor3}}</p>
+    {{post.contenido}}
+
+
+{% endblock %}
+
+
+
+
+
+
+ {% block contenido_medio %}
+
+{% endblock %}
+
+
+{% block news_start %}
+
+{% endblock %}
+
+{% block noticias_recientes %}
+
+
+{% endblock %}
+
+
+{% block segmento %}
+
+<p><em><h3>Te puede interesar</p></em></h3>
+{% for interes in DeInteres %}
+
+ <div class ="row">
+<div class = "col-2 mr-auto">
+    
+    <div class="card" style="width: 20rem;">
+        <img class="card-img-top "src="/static/{{interes.De_interes.imagen_preferencial}}"  width="250" height="200"alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">{{interes.De_interes.Titulo}}</h4>
+          <p class="card-text">{{ interes.De_interes.descripcion }}</p>
+          <a href="{% url 'news_app:detail' interes.De_interes.id interes.De_interes.slug %}" class="btn btn-primary">Leer Mas</a>
+        </div>
+      </div>
+    </div>
+    
+      {% endfor %}
+    </div>
+
+
+  
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+{% block footer %}
+
+<footer>
+    <!-- Footer Start-->
+    <div class="footer-main footer-bg">
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-8">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
+                                <!-- logo -->
+                               
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p class="info1">Somos un medio de comunicación especialmente para ti, para que estes informado las
+                                            24 horas del dia y los 7 dias de  la semana .</p>
+                                        <p class="info2">Zona Oriental , invivienda Santo Domingo Este, República Dominicana</p>
+                                        <p class="info2">Phone: 829-586-2553 /809-381-3160</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7">
+                        <div class="single-footer-caption mb-50">
+
+                            <!-- Popular post -->
+
+
+
+
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
+                        <div class="single-footer-caption mb-50">
+                            <div class="banner">
+                                <img src="{% static '/img/gallery/body_card4.png'%}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom aera -->
+        <div class="footer-bottom-area footer-bg">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-center">
+                                <p>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                                    All rights reserved
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End-->
+</footer>
+
+
+{% endblock %}
+
+{% block videos_banner %}
+
+{% endblock %}
+
+     {% block opinion %}
+{% endblock %}
