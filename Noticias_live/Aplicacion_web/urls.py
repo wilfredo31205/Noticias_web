@@ -20,7 +20,7 @@ urlpatterns = [
     path('opiniones/',OpinionView.as_view(), name='opinion'),
     path('contacto/',contacto,name="contacto"),
 
-    #cuando cambies solo deber ser localhost/deportes/ pra listar post sobre deportes, si, se me habia olvidado quitar el pk id
+    
 
 
 
