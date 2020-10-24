@@ -33,8 +33,7 @@ from django.http import HttpResponse
 
 def contacto(request):
 
-# en el if request. method=="post" lo que dice es que si al pulsar en el boton de enviar , el servidor 
-#detecta que estamos utiliando el metodo psot. 
+
     if request.method=="POST":
 
         miformulario=FormularioContacto(request.POST)
@@ -139,7 +138,7 @@ class detalleView(DetailView):
         context['post'].Contador_visitas = context['post'].Contador_visitas + 1
         context['post'].save()
         context['DeInteres'] = Post_de_Interes.objects.all()
-        #retornamos el contexto jejeje si me expliqye? xPv  si ,
+      
         return context
 
         def get_object(self, **kwargs):
@@ -167,18 +166,13 @@ class detalles_noticias(DetailView):
 
     #matodo para conexto
     def get_context_data(self, **kwargs):
-        #usamos el get_context que viene por default en el DetailView
+     
         context = super().get_context_data(**kwargs)
-        #los parametros que se mandan por url se iran al dic de kargs por eso el self.kwargs['pk']
+
         context['Noticias_Recientes'] = Noticias_Recientes.objects.get(pk=self.kwargs['pk'])
-   
-        #retornamos el contexto jejeje si me expliqye? xPv  si ,
+
         return context
 
-    # (pk=self.kwargs['pk']) == esto es especificamente,, lo otro me lo sé XD
-    #ah menb detalles_noticias/<int:pk>/ por tener el <int:pk> lo  puedes tener como variable
-    #esa variable estara en el kwargs y para acceder en ella solo vas a poner el nombre pk
-    #por eso el kargs["pk"] ahora si entiendo esta mierda XD
 
 
 
@@ -262,11 +256,11 @@ class detalleViewopinion(DetailView):
     model = Opinion
     template_name = 'detalles_opinion.html'
     def get_context_data(self, **kwargs):
-        #usamos el get_context que viene por default en el DetailView
+       
         context = super().get_context_data(**kwargs)
-        #los parametros que se mandan por url se iran al dic de kargs por eso el self.kwargs['pk']
+
         context['contenidos'] =Opinion.objects.get(pk=self.kwargs['pk'])
-        #retornamos el contexto jejeje si me expliqye? xPv  si ,
+
         return context
 
 
